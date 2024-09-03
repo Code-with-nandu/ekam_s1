@@ -24,8 +24,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = '';
-$config['base_url'] = 'http://localhost/1_Gurudev/1_Ashram/New/1_campusNew/camp';
+// $config['base_url'] = 'http://localhost/1_Gurudev/1_Ashram/New/1_campusNew/camp';
 
+switch ($_SERVER['SERVER_NAME']) {
+    case 'localhost':
+        $config['base_url'] = 'http://localhost/1_Gurudev/1_Ashram/New/1_campusNew/';
+        break;
+
+    case '3.86.144.98':
+        $config['base_url'] = 'http://3.86.144.98/ekam_s1/';
+        break;
+
+    default:
+        $config['base_url'] = 'http://localhost/1_Gurudev/1_Ashram/New/1_campusNew/';
+        break;
+}
 
 /*
 |--------------------------------------------------------------------------
